@@ -4,7 +4,7 @@ require(phyloseq)
 # Taxonomy table of the phyloseq object ps
 tax.tab <- data.frame(tax_table(ps))
 
-# NameTax function. It adds a prefix in front of each taxonomical level.
+# NameTax function. It adds a prefix in front of each taxonomical level. Modified from https://github.com/joey711/phyloseq/issues/773
 NameTax <- function(x, ind){
   if(is.na(x[ind])){
     x[ind] <- x[ind]
